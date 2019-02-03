@@ -23,3 +23,6 @@ def create(request):
     blog.pub_date = timezone.datetime.now() 
     blog.save()         # 쿼리셋 메소드 중 하나 / 저장해라라는 의미
     return redirect('/blog/'+str(blog.id))
+
+def introduce(request):
+    return render(request, 'introduce.html')
